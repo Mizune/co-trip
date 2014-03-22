@@ -8,8 +8,8 @@ class QuponsController < ApplicationController
   end
 
   def get
-    @qupons = Qupon.find_all_by_quponflag(true)
-    # @qupons = Qupon.all
+    # @qupons = Qupon.find_all_by_quponflag(true)
+    @qupons = Qupon.all
   end
 
   # GET /qupons/1
@@ -69,7 +69,7 @@ class QuponsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_qupon
-      # @qupon = Qupon.find(params[:id])
+      @qupon = Qupon.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

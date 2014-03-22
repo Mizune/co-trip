@@ -1,6 +1,6 @@
 Cotrip::Application.routes.draw do
-  get "qupons/index"
   get "qupons/get"
+  get "qupons/index"
 
   resources :qupons
 
