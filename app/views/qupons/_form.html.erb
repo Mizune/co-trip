@@ -1,0 +1,37 @@
+<%= form_for(@qupon) do |f| %>
+  <% if @qupon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qupon.errors.count, "error") %> prohibited this qupon from being saved:</h2>
+
+      <ul>
+      <% @qupon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :quponflag %><br>
+    <%= f.check_box :quponflag %>
+  </div>
+  <div class="field">
+    <%= f.label :discription %><br>
+    <%= f.text_area :discription %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

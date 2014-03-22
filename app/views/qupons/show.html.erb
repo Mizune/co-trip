@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @qupon.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @qupon.date %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @qupon.image %>
+</p>
+
+<p>
+  <strong>Quponflag:</strong>
+  <%= @qupon.quponflag %>
+</p>
+
+<p>
+  <strong>Discription:</strong>
+  <%= @qupon.discription %>
+</p>
+
+<%= link_to 'Edit', edit_qupon_path(@qupon) %> |
+<%= link_to 'Back', qupons_path %>

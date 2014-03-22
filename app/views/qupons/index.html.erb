@@ -1,0 +1,35 @@
+<h1>Listing qupons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Image</th>
+      <th>Quponflag</th>
+      <th>Discription</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qupons.each do |qupon| %>
+      <tr>
+        <td><%= qupon.name %></td>
+        <td><%= qupon.date %></td>
+        <td><%= qupon.image %></td>
+        <td><%= qupon.quponflag %></td>
+        <td><%= qupon.discription %></td>
+        <td><%= link_to 'Show', qupon %></td>
+        <td><%= link_to 'Edit', edit_qupon_path(qupon) %></td>
+        <td><%= link_to 'Destroy', qupon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qupon', new_qupon_path %>
